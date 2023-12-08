@@ -14,8 +14,4 @@ document.querySelector("#submit").addEventListener("click", () => {
     const result = document.querySelector("#result");
     result.textContent = "Squares visited on shortest path: "+getPath(Math.floor(startPosn.value/10), startPosn.value%10,
                                     Math.floor(endPosn.value/10), endPosn.value%10,);
-})
-
-// TEMP FOR TESTING
-result.textContent = "Path from (1,1) to (4,4): "+getPath(1,1,4,4);
-                        
+})                        

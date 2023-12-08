@@ -12,7 +12,7 @@ document.querySelector("#clear").addEventListener("click", () => {
 // Calulate handling
 document.querySelector("#submit").addEventListener("click", () => {
     const result = document.querySelector("#result");
-    result.textContent = getPath(Math.floor(startPosn.value/10), startPosn.value%10,
+    result.textContent = "Squares visited on shortest path: "+getPath(Math.floor(startPosn.value/10), startPosn.value%10,
                                     Math.floor(endPosn.value/10), endPosn.value%10,);
 })
 

@@ -2,7 +2,6 @@ export { getPath }
 
 const posnFactory = (x,y,parent) => {
     let children = []; 
-    
 
     // Given a posn, returns an array of posn corresponding to reachable posn
     function getNext(){
@@ -34,19 +33,12 @@ const posnFactory = (x,y,parent) => {
         arr.push(posn.parent);
         tracePath(posn.parent, root, arr);
     }
-
-    function consolePrint(){
-        console.log("("+x+","+y+")");
-    }
-    function print(){
-        return "("+x+","+y+")";
-    }
     return{
         get x(){return x;}, set x(newX){x=newX},
         get y(){return y;}, set y(newY){y=newY},
         get parent(){return parent;}, set parent(newParent){parent=newParent},
         get children(){return children;}, set children(newChildren){children=newChildren},
-        getNext, tracePath, consolePrint, print,
+        getNext, tracePath
     };
 };
 
@@ -83,8 +75,6 @@ function getPath(startX, startY, endX, endY){
         queue.splice(0,1); // Remove posn from front of queue
         result.splice(0,1);
     }
-    
-    
     return printPosnArray(result);
 }
 
